@@ -49,10 +49,10 @@ X_test.drop(labels='date', axis=True, inplace=True)
 
 # --- Model Building ---
 # Linear Regression Model
-from sklearn.linear_model import LinearRegression
+from sklearn import linear_model , LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train,y_train)
 
 # Creating a pickle file for the classifier
 filename = 'first-innings-score-lr-model.pkl'
-pickle.dump(regressor,open(filename, 'wb'))
+pickle.dump(regressor, open(filename, 'wb'))
